@@ -202,10 +202,11 @@ for i in range(N_epochs):
     #  # k += 1
     ##if(i == np.round(N_epochs/2)):
     ##    stepsize = 0.0001
-
+plt.figure()
 plt.plot(L[0:])
 plt.show()
 plt.savefig('loss.png')
+plt.figure()
 plt.plot(X[0:50,0], X[0:50,1], 'ro')
 plt.plot(X[50:100,0], X[50:100,1], 'bx')
 plt.savefig('data.png')
@@ -219,7 +220,7 @@ for x in np.arange(-1, 1, 6/200):
         if(H_list[-1]>= 0.49 and H_list[-1]<=0.51):
             boundary_x.append(x)
             boundary_y.append(y)
-
+plt.figure()
 plt.plot(X[0:50,0], X[0:50,1], 'ro')
 plt.plot(X[50:100,0], X[50:100,1], 'bx')
 plt.plot(boundary_x, boundary_y, 'c.')
