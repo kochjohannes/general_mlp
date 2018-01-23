@@ -205,8 +205,10 @@ for i in range(N_epochs):
 
 plt.plot(L[0:])
 plt.show()
+plt.savefig('loss.png')
 plt.plot(X[0:50,0], X[0:50,1], 'ro')
 plt.plot(X[50:100,0], X[50:100,1], 'bx')
+plt.savefig('data.png')
 plt.show()
 
 boundary_x = []
@@ -221,4 +223,5 @@ for x in np.arange(-1, 1, 6/200):
 plt.plot(X[0:50,0], X[0:50,1], 'ro')
 plt.plot(X[50:100,0], X[50:100,1], 'bx')
 plt.plot(boundary_x, boundary_y, 'c.')
+plt.savefig('deciscion_boundary.png')
 plt.show()
